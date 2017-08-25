@@ -1,0 +1,32 @@
+{
+    "name": "netcore/netcore",
+    "type" : "package",
+    "description": "Netcore modular cms base",
+    "keywords" : ["netcore","development","init","initial","commands"],
+    "homepage" : "http://netcore.lv",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jānis Blaus",
+            "email": "janis@netcore.lv"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "laravel/framework": "5.*",
+        "nwidart/laravel-modules": "^1.27",
+        "barryvdh/laravel-ide-helper": "^2.3",
+        "barryvdh/laravel-debugbar" : "^2.3"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Netcore\\Netcore\\": "src/"
+        }
+    },
+    "scripts" : {
+        "post-package-install" : [
+            "php artisan ide-helper:generate"
+        ]
+    },
+    "minimum-stability": "dev"
+}
