@@ -14,7 +14,7 @@
     "require": {
         "php": ">=5.4.0",
         "laravel/framework": "5.*",
-        "nwidart/laravel-modules": "^1.27",
+        "nwidart/laravel-modules": "^2.0",
         "barryvdh/laravel-ide-helper": "^2.3",
         "barryvdh/laravel-debugbar" : "^2.3"
     },
