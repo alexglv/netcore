@@ -5,6 +5,7 @@ namespace Netcore\Netcore;
 use Barryvdh\Debugbar\ServiceProvider as DebugbarServiceProvider;
 use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
 use Illuminate\Support\ServiceProvider;
+use Netcore\Netcore\Console\WatchModuleAssets;
 use Nwidart\Modules\LaravelModulesServiceProvider;
 
 class LaravelServiceProvider extends ServiceProvider
@@ -31,6 +32,10 @@ class LaravelServiceProvider extends ServiceProvider
         if( $this->app->environment() !== 'production' ){
             $this->app->register(DebugbarServiceProvider::class);
             $this->app->register(IdeHelperServiceProvider::class);
+
+            $this->commands([
+                WatchModuleAssets::class
+            ]);
         }
 
         $this->app->register(LaravelModulesServiceProvider::class);

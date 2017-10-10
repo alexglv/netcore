@@ -18,6 +18,9 @@
         "barryvdh/laravel-ide-helper": "^2.3",
         "barryvdh/laravel-debugbar" : "^2.3"
     },
+    "require-dev": {
+        "jasonlewis/resource-watcher": "1.2.*"
+    },
     "autoload" : {
         "psr-4" : {
             "Netcore\\Netcore\\": "src/"
