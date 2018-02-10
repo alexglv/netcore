@@ -43,14 +43,14 @@ class WatchModuleAssets extends Command
         foreach ($moduleAssetsDirectories as $directory) {
             $listener = $watcher->watch($directory);
 
-            $listener->anything(function($event, $resource, $path) {
+            $listener->anything(function ($event, $resource, $path) {
 
                 $this->info('[Netcore Watcher] ' . $path . ' changed!');
 
                 // Determine which module has been changed
                 preg_match('/(module-[^\/]+)/', $path, $matches);
 
-                if(isset($matches[0]) && strpos($matches[0], 'module') !== false) {
+                if (isset($matches[0]) && strpos($matches[0], 'module') !== false) {
                     $name = str_replace('module-', '', $matches[0]);
                     $name = ucfirst($name);
 
