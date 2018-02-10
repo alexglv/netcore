@@ -12,14 +12,12 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "laravel/framework": "5.*",
-        "nwidart/laravel-modules": "^2.0",
-        "barryvdh/laravel-ide-helper": "^2.3",
-        "barryvdh/laravel-debugbar" : "^2.3"
+        "php": ">=5.5.0",
+        "nwidart/laravel-modules": "^2.7",
+        "laravel/framework": "^5.6"
     },
     "require-dev": {
-        "jasonlewis/resource-watcher": "1.2.*"
+        "jasonlewis/resource-watcher": "^1.2"
     },
     "autoload" : {
         "psr-4" : {
@@ -28,8 +26,7 @@
     },
     "scripts" : {
         "post-package-install" : [
-            "php artisan ide-helper:generate"
         ]
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
