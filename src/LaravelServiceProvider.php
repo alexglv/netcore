@@ -2,11 +2,8 @@
 
 namespace Netcore\Netcore;
 
-use Barryvdh\Debugbar\ServiceProvider as DebugbarServiceProvider;
-use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
 use Illuminate\Support\ServiceProvider;
 use Netcore\Netcore\Console\WatchModuleAssets;
-use Nwidart\Modules\LaravelModulesServiceProvider;
 
 class LaravelServiceProvider extends ServiceProvider
 {

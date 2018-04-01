@@ -1,8 +1,8 @@
 {
     "name": "netcore/netcore",
     "type" : "package",
-    "description": "Netcore modular cms base",
-    "keywords" : ["netcore","development","init","initial","commands"],
+    "description": "Netcore modular CMS base",
+    "keywords" : ["netcore", "development", "init", "initial", "commands"],
     "homepage" : "http://netcore.lv",
     "license": "MIT",
     "authors": [
@@ -12,9 +12,9 @@
         }
     ],
     "require": {
-        "php": ">=5.5.0",
-        "nwidart/laravel-modules": "^2.7",
-        "laravel/framework": "^5.5",
+        "php": ">=7.1",
+        "nwidart/laravel-modules": "^3.0",
+        "illuminate/support": "^5.6",
         "jasonlewis/resource-watcher": "^1.2"
     },
     "autoload" : {
@@ -22,9 +22,12 @@
             "Netcore\\Netcore\\": "src/"
         }
     },
-    "scripts" : {
-        "post-package-install" : [
-        ]
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Netcore\\Netcore\\LaravelServiceProvider"
+            ]
+        }
     },
     "minimum-stability": "stable"
 }
