@@ -3,6 +3,7 @@
 namespace Netcore\Netcore;
 
 use Illuminate\Support\ServiceProvider;
+use Netcore\Netcore\Console\Install;
 use Netcore\Netcore\Console\WatchModuleAssets;
 
 class LaravelServiceProvider extends ServiceProvider
@@ -28,7 +29,8 @@ class LaravelServiceProvider extends ServiceProvider
     {
         if ($this->app->environment() !== 'production') {
             $this->commands([
-                WatchModuleAssets::class
+                WatchModuleAssets::class,
+                Install::class
             ]);
         }
     }
